@@ -1,0 +1,19 @@
+#title {
+    background-color: var(--light-yellow);
+    color: var(--black-blue);
+    width: 23rem;
+    margin: 5rem auto 3rem auto;
+    border-radius: 4px;
+    padding: 1rem;
+    border: 2px solid var(--dark-blue);
+}
+
+#intro-description {
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 60rem;
+    margin: 0 auto 3rem auto;
+    border: 2px solid var(--light-yellow);
+    border-radius: 8px;
+    background-color: rgba(24, 28, 38, 0.6);
+}

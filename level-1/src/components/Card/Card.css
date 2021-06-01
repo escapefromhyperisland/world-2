@@ -1,0 +1,18 @@
+.card876345, .card647912, .card513864, .card982637, .card134076  {
+    display: inline;
+    width: 8rem;
+    height: 8rem;
+    margin: 0.9rem;
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    border: 2px solid var(--dark-blue);
+}
+
+.flipped {
+    font-size: 1rem;
+    background: tomato;
+}
+
+.cardPaired {
+    display: none;
+}
