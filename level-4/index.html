@@ -1,10 +1,9 @@
 <html>
 	<head>
-		<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 		<script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
-		<script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js%22%3E"> </script>
-		<script src="srcipt/popup.js"></script>
+		<script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>		<script src="srcipt/popup.js"></script>
 		<script src="srcipt/paperPopup.js"></script>
 		<script src="srcipt/introPopup.js"></script>
 		<script src="srcipt/outsideClue.js"></script>
@@ -53,60 +52,61 @@
 			cursor="rayOrigin: mouse" 
 			inspector-plugin-recast         
 			fog="color:  #223a59;  near:  0;  far:  19.81;  density:  0"
-
+			environment="preset:  goaland;  active:  true;  skyType:  gradient;  skyColor:  #000000;  horizonColor:  #9992f7;  lighting:  point;  shadow:  true;  lightPosition:  [object Object];  fog:  0.96;  groundTexture:  squares;  dressing:  trees;  dressingAmount:  300;  dressingVariance:  [object Object];  dressingScale:  6.7"
 			>
 			<a-asset-item id="nav-mesh" src="navmesh-1.gltf"></a-asset-item>
 			<a-assets>
-				<img id="map" src="assets/map.png" />
-				<img id="concrete" src="assets/old-grunge-concrete.jpg" />
+				<img id="map" src="./assets/map.png" />
+				<img id="concrete" src="./assets/old-grunge-concrete.jpg" />
+
 				<!-- Furniture -->
 				<a-asset-item
 					id="wooden-table-obj"
-					src="/wooden-coffe-table-obj/wooden-coffe-table.obj"
+					src="./wooden-coffe-table-obj/wooden-coffe-table.obj"
 				></a-asset-item>
 				<a-asset-item
 					id="wooden-table-mtl"
-					src="/wooden-coffe-table-obj/wooden-coffe-table.mtl"
+					src="./wooden-coffe-table-obj/wooden-coffe-table.mtl"
 				></a-asset-item>
 				<a-asset-item
 					id="shelf-obj"
-					src="/bookshelf-obj/bookshelf.obj"
+					src="./bookshelf-obj/bookshelf.obj"
 				></a-asset-item>
 				<a-asset-item
 					id="shelf-mtl"
-					src="/bookshelf-obj/bookshelf.mtl"
+					src="./bookshelf-obj/bookshelf.mtl"
 				></a-asset-item>
 				<a-asset-item 
                     id="books-obj" 
-                    src="/books-obj/books.obj"
+                    src="./books-obj/books.obj"
                 ></a-asset-item>
 				<a-asset-item 
                     id="books-mtl" 
-                    src="/books-obj/books.mtl"
+                    src="./books-obj/books.mtl"
                 ></a-asset-item>
 				<a-asset-item 
                     id="chair-obj" 
-                    src="/chair-obj/chair.obj"
+                    src="./chair-obj/chair.obj"
                 ></a-asset-item>
 				<a-asset-item 
                     id="chair-mtl" 
-                    src="/chair-obj/chair.mtl"
+                    src="./chair-obj/chair.mtl"
                 ></a-asset-item>
 				<a-asset-item 
                     id="statue-obj" 
-                    src="/lion-statue-obj/lion-statue.obj"
+                    src="./lion-statue-obj/lion-statue.obj"
                 ></a-asset-item>
 				<a-asset-item 
                     id="statue-mtl" 
-                    src="/lion-statue-obj/lion-statue.mtl"
+                    src="./lion-statue-obj/lion-statue.mtl"
                 ></a-asset-item>
 				<a-asset-item 
                     id="bed-obj" 
-                    src="/fixed-opem-sim-bead-model-obj/fixed-opem-sim-bead-model.obj"
+                    src="./fixed-opem-sim-bead-model-obj/fixed-opem-sim-bead-model.obj"
                 ></a-asset-item>
 				<a-asset-item 
                     id="bed-mtl" 
-                    src="/fixed-opem-sim-bead-model-obj/fixed-opem-sim-bead-model.mtl"
+                    src="./fixed-opem-sim-bead-model-obj/fixed-opem-sim-bead-model.mtl"
                 ></a-asset-item>
 
 
