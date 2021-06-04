@@ -1,0 +1,541 @@
+body {
+  background-image: url(/assets/milky-way.jpg);
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  position: absolute;
+  margin: 0;
+  background-size: 2500px;
+  background-position: center; */
+}
+button{
+  width: 150%;
+  height: 150%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  z-index: 5;
+}
+
+#div
+{
+ width: 100%;
+ height: 100%;
+}
+audio {
+  display: none;
+}
+
+.button1 {
+  top: 205%;
+  left: 364%;
+  width: 25%;
+  height: 20%;
+  background:transparent;
+}
+
+.button2 {
+  top: 16%;
+  left: 48%;
+  background:transparent;
+}
+
+.button3 {
+  top: 178%;
+  left: 48%;
+  background:transparent;
+}
+
+.button4 {
+  top: 330%;
+  left: 48%;
+  background:transparent;
+}
+
+.button5 {
+  top: 330%;
+  left: 207%;
+  background:transparent;
+}
+
+.button6 {
+  top: 178%;
+  left: 207%;
+  background: transparent;
+}
+
+.button7 {
+  top: 25%;
+  left: 207%;
+  background: transparent;
+}
+
+.button8 {
+  top: 300%;
+  left: 365%;
+  background:transparent;
+}
+
+.button9 {
+  top: 110%;
+  left: 365%;
+  background:transparent;
+}
+
+.button10 {
+  top: 10%;
+  left: 365%;
+  background:transparent;
+}
+
+.button11 {
+  top: 10%;
+  left: 520%;
+  background:transparent;
+}
+
+.button12 {
+  top: 174%;
+  left: 520%;
+  background:transparent;
+}
+
+.button13 {
+  top: 330%;
+  left: 520%;
+  background:transparent;
+}
+
+.button14 {
+  top: 1030%;
+  left: 1235%;
+  background:transparent;
+}
+
+.button15 {
+  top: 1030%;
+  left: 950%;
+  background:transparent;
+}
+
+
+.button16 {
+  top: 75%;
+  left: 509%;
+  background: transparent;
+}
+
+.button17 {
+  top: 238%;
+  left: 508%;
+  background:transparent;
+}
+
+.button19 {
+  top: 1030%;
+  left: 1200%;
+  background:transparent;
+}
+
+.div-box1 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+.div-box2 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box3 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box4 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box5 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box6 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box7 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box8 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box9 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box10 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box10 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box11 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box12 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box13 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.div-box14 {
+  background-color: transparent;
+  width: 100px;
+  height: 60px;
+  position: absolute;
+}
+
+.div-box15 {
+  background-color:transparent;
+  width: 100px;
+  height: 60px;
+  position: absolute;
+}
+
+.div-box16 {
+  background-color:transparent;
+  width: 420px;
+  height: 420px;
+  position: absolute;
+}
+
+.div-box17 {
+  background-color: transparent;
+  width: 420px;
+  height: 420px;
+  position: absolute;
+}
+
+div {
+  display: block;
+  width: 100%;
+  margin: 10px;
+}
+img {
+  float: left;
+  padding: 10px;
+  background-color: transparent;
+}
+/* .all-radios{
+  width: 1000px;
+  height: ;
+} */
+
+/* .div-box2 {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  position: absolute; */
+
+.alien-box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name: littlealien;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  z-index: -1;
+  animation-direction: alternate;
+}
+
+@keyframes littlealien {
+  0% {
+    background-color: green;
+    right: 20px;
+    top: 75px;
+    border-radius: 50% 50% 0 0;
+  }
+  4% {
+    background-color: rgb(92, 54, 95);
+    right: 300px;
+    top: 330px;
+    border-radius: 50% 50% 0 0;
+  }
+  10% {
+    background-color: green;
+    right: 200px;
+    top: 80px;
+    border-radius: 50% 50% 50% 0;
+  }
+  14% {
+    background-color: rgb(247, 30, 30);
+    right: 100px;
+    top: 300px;
+    border-radius: 10% 40% -20% 0;
+  }
+  25% {
+    background-color: rgb(27, 175, 233);
+    left: 300px;
+    top: 800px;
+    right: 200px;
+    border-radius: 20% 30% 0 0;
+  }
+  30% {
+    background-color: red;
+    left: 200px;
+    top: 400px;
+    border-radius: 20% 30% 0 0;
+  }
+  50% {
+    background-color: purple;
+    right: 300px;
+    top: 300px;
+    border-radius: 50% 50% 0 0;
+  }
+  75% {
+    background-color: orange;
+    right: 300px;
+    bottom: 300px;
+    border-radius: 50% 50% 50% 0;
+  }
+  99% {
+    background-color: green;
+    right: 80px;
+    top: 250px;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: black;
+  width: 40vmax;
+  z-index: 1;
+  animation: move 20s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1) translate(10px, -30px);
+  }
+  38% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+  40% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+  78% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+  80% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) translate(10px, -30px);
+  }
+}
+
+.alien-box3 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name: littlealien3;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  z-index: -1;
+  animation-direction: alternate;
+}
+
+@keyframes littlealien3 {
+  0% {
+    background-color: rgb(7, 7, 7);
+    right: 100px;
+    top: 150px;
+    border-radius: 0 0 50% 0;
+  }
+  4% {
+    background-color: rgb(92, 54, 95);
+    right: 100px;
+    top: 330px;
+    border-radius: 0 50% 50% 50%;
+  }
+  10% {
+    background-color: green;
+    left: 200px;
+    top: 80px;
+    border-radius: 0 50% 50% 50%;
+  }
+  14% {
+    background-color: rgb(247, 30, 30);
+    right: 10px;
+    top: 20px;
+    border-radius: 0 0 50% 0;
+  }
+  25% {
+    background-color: rgb(27, 175, 233);
+    left: 300px;
+    top: 800px;
+    right: 200px;
+    border-radius: 20% 30% 0 0;
+  }
+  30% {
+    background-color: red;
+    left: 20px;
+    top: 1500px;
+    border-radius: 50% 50% 50% 50%;
+  }
+  44% {
+    background-color: rgb(245, 110, 234);
+    left: 20px;
+    top: 10px;
+    border-radius: 0 0 0 50%;
+  }
+  50% {
+    background-color: rgb(104, 27, 3);
+    right: 300px;
+    top: 300px;
+    border-radius: 50% 50% 0 0;
+  }
+  75% {
+    background-color: rgb(33, 10, 240);
+    right: 10px;
+    top: 100px;
+    border-radius: 50% 50% 50% 0;
+  }
+  80% {
+    background-color: crimson;
+    right: 10px;
+    top: 100px;
+    border-radius: 50% 50% 50% 0;
+  }
+  99% {
+    background-color: darkolivegreen;
+    right: 500px;
+    top: 250px;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+.alien-box2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name: littlealien2;
+  animation-duration: 90s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  z-index: -1;
+  animation-direction: alternate;
+}
+
+@keyframes littlealien2 {
+  0% {
+    background-color: green;
+    right: 220px;
+    top: 850px;
+    border-radius: 50% 50% 0 0;
+  }
+  4% {
+    background-color: rgb(92, 54, 95);
+    left: 300px;
+    bottom: 330px;
+    border-radius: 50% 50% 0 0;
+  }
+  10% {
+    background-color: green;
+    right: 100px;
+    bottom: 200px;
+    border-radius: 50% 50% 50% 0;
+  }
+  14% {
+    background-color: rgb(247, 30, 30);
+    right: 100px;
+    bottom: 300px;
+    border-radius: 10% 40% -20% 0;
+  }
+  25% {
+    background-color: rgb(27, 175, 233);
+    bottom: 500px;
+    right: 200px;
+    border-radius: 20% 30% 0 0;
+  }
+  30% {
+    background-color: red;
+    right: 10px;
+    bottom: 400px;
+    border-radius: 20% 30% 0 0;
+  }
+  50% {
+    background-color: purple;
+    right: 50px;
+    bottom: 80px;
+    border-radius: 50% 50% 0 0;
+  }
+  75% {
+    background-color: orange;
+    right: 300px;
+    bottom: 100px;
+    border-radius: 50% 50% 50% 0;
+  }
+  99% {
+    background-color: green;
+    right: 80px;
+    bottom: 250px;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
