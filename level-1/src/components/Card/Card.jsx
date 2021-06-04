@@ -1,24 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Card.css';
 
 const Card = (props) => {
-
-    const [flipped, setFlipped] = useState(false);
-
     return (
         <>
-            {flipped && 
-                <button className={'card' + props.number} onClick={() => { 
-                    setFlipped(false) 
-                }}>{props.number}</button>
-            }
-
-            {!flipped &&
-                <button className={'card' + props.number} onClick={() => {
-                    setFlipped(true)
-                    props.onOpen(props.number)
-                }}>Click to Flip</button>
-            }
+            <button className={'card' + props.number} onClick={() => {
+                props.onFlip();
+            }}>{props.isFlipped ? props.number : 'Click to flip'}</button>
         </>
     )
 }

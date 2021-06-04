@@ -3,37 +3,55 @@ import Card from './Card/Card';
 
 const MemoryGame = () => {
 
-    const memoryGameNumbers = ['876345', '647912', '513864', '982637', '876345', '513864', '134076', '647912', '982637'];
+    const [numbers, setNumbers] = useState(['876345', '647912', '513864', '982637', '876345', '513864', '134076', '647912', '982637'])
+    const [flippedCard, setFlippedCard] = useState(null)
+    const [latestSelectedCard, setLatestSelectedCard] = useState(null)
 
-    const [openCard, setOpenCard] = useState(null)
+    useEffect(() => {
+        if (flippedCard && latestSelectedCard) {
+            if ((flippedCard.number === latestSelectedCard.number)
+                && (flippedCard.index !== latestSelectedCard.index)) {
 
-    const flipCard = (number) => {
-        if (openCard) {
-            if (openCard === number) {
-                memoryGameNumbers.splice(memoryGameNumbers.indexOf(openCard), 1)
-                console.log(memoryGameNumbers)
-            } else {
-                //desvirar as duas cartas
-                setOpenCard(null)
+                const updatedNumbers = numbers.filter(number => number !== flippedCard.number)
+                setTimeout(() => { setNumbers(updatedNumbers) }, 750);
             }
-        } else {
-            setOpenCard(number)
-            console.log('2else' + openCard)
+
+            setTimeout(() => {
+                setFlippedCard(null)
+                setLatestSelectedCard(null)
+            }, 750);
+        }
+    }, [flippedCard, latestSelectedCard, numbers]);
+
+    const flipCard = (selectedCard) => {
+        if (!flippedCard) {
+            setFlippedCard(selectedCard)
+        } else if (!latestSelectedCard) {
+            setLatestSelectedCard(selectedCard)
         }
     }
 
-    useEffect(() => {
-        document.getElementById('card-section');
-    }, [])
+    const isCardFlipped = ({ number, index }) => {
+        const isFlippedCard = flippedCard
+            && flippedCard.index === index
+            && flippedCard.number === number
+
+        const isLatestSelectedCard = latestSelectedCard
+            && latestSelectedCard.index === index
+            && latestSelectedCard.number === number
+
+        return isFlippedCard || isLatestSelectedCard
+    }
 
     return (
         <div id='card-section'>
-            {memoryGameNumbers.map((number, index) => {
+            {numbers.map((number, index) => {
                 return (
                     <Card
-                        number={number}
                         key={index}
-                        onOpen={flipCard}
+                        onFlip={() => flipCard({ number, index })}
+                        number={number}
+                        isFlipped={isCardFlipped({ number, index })}
                     />
                 )
             })}
