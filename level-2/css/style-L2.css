@@ -1,13 +1,13 @@
 body {
   background-image: url(/assets/milky-way.jpg);
-  /* background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   height: 100vh;
   position: absolute;
   margin: 0;
   background-size: 2500px;
-  background-position: center; */
+  background-position: center;
 }
 button{
   width: 150%;
@@ -143,6 +143,28 @@ audio {
   background:transparent;
 }
 
+.next-level-button {
+  background-color: #d9d9d9;
+  font-family: "Space Mono", monospace;
+  font-size: 30px;
+  width: 300px;
+  height: 90px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  position: absolute;
+  top: 169%;
+  right: 0.5%;
+  bottom: 5%
+  
+}
+
+.next-stage-div {
+  position: absolute;
+  top: 180%;
+}
+
 .div-box1 {
   background-color: transparent;
   width: 300px;
@@ -268,6 +290,13 @@ audio {
   position: absolute;
 }
 
+.div-box18 {
+  background-color: transparent;
+  width: 420px;
+  height: 500px;
+  position: absolute;
+}
+
 div {
   display: block;
   width: 100%;
@@ -278,10 +307,6 @@ img {
   padding: 10px;
   background-color: transparent;
 }
-/* .all-radios{
-  width: 1000px;
-  height: ;
-} */
 
 /* .div-box2 {
   background-color: green;
@@ -303,56 +328,56 @@ img {
 
 @keyframes littlealien {
   0% {
-    background-color: green;
+    background-color: #6C7336;
     right: 20px;
     top: 75px;
     border-radius: 50% 50% 0 0;
   }
   4% {
-    background-color: rgb(92, 54, 95);
+    background-color: #D99152;
     right: 300px;
     top: 330px;
     border-radius: 50% 50% 0 0;
   }
   10% {
-    background-color: green;
+    background-color: #F2C0A2;
     right: 200px;
     top: 80px;
     border-radius: 50% 50% 50% 0;
   }
   14% {
-    background-color: rgb(247, 30, 30);
+    background-color: #C7C6C4;
     right: 100px;
     top: 300px;
     border-radius: 10% 40% -20% 0;
   }
   25% {
-    background-color: rgb(27, 175, 233);
+    background-color: #3F768C;
     left: 300px;
     top: 800px;
     right: 200px;
     border-radius: 20% 30% 0 0;
   }
   30% {
-    background-color: red;
+    background-color:#F2D785;
     left: 200px;
     top: 400px;
     border-radius: 20% 30% 0 0;
   }
   50% {
-    background-color: purple;
+    background-color: #F2C0A2;
     right: 300px;
     top: 300px;
     border-radius: 50% 50% 0 0;
   }
   75% {
-    background-color: orange;
+    background-color: #3F768C;
     right: 300px;
     bottom: 300px;
     border-radius: 50% 50% 50% 0;
   }
   99% {
-    background-color: green;
+    background-color: #d9d9d9;
     right: 80px;
     top: 250px;
     border-radius: 50% 50% 50% 50%;
@@ -404,68 +429,68 @@ img {
 
 @keyframes littlealien3 {
   0% {
-    background-color: rgb(7, 7, 7);
+    background-color: #F28F79;
     right: 100px;
     top: 150px;
     border-radius: 0 0 50% 0;
   }
   4% {
-    background-color: rgb(92, 54, 95);
+    background-color: #3F768C;
     right: 100px;
     top: 330px;
     border-radius: 0 50% 50% 50%;
   }
   10% {
-    background-color: green;
+    background-color:#F2D785;
     left: 200px;
     top: 80px;
     border-radius: 0 50% 50% 50%;
   }
   14% {
-    background-color: rgb(247, 30, 30);
+    background-color: #C7C6C4;
     right: 10px;
     top: 20px;
     border-radius: 0 0 50% 0;
   }
   25% {
-    background-color: rgb(27, 175, 233);
+    background-color: #3F768C;
     left: 300px;
     top: 800px;
     right: 200px;
     border-radius: 20% 30% 0 0;
   }
   30% {
-    background-color: red;
+    background-color: #d9d9d9;
     left: 20px;
     top: 1500px;
     border-radius: 50% 50% 50% 50%;
   }
   44% {
-    background-color: rgb(245, 110, 234);
+    background-color: #F2D785;
     left: 20px;
     top: 10px;
     border-radius: 0 0 0 50%;
   }
   50% {
-    background-color: rgb(104, 27, 3);
+    background-color: #F28F79;
     right: 300px;
     top: 300px;
     border-radius: 50% 50% 0 0;
   }
   75% {
-    background-color: rgb(33, 10, 240);
+    background-color: #3F768C;
     right: 10px;
     top: 100px;
     border-radius: 50% 50% 50% 0;
   }
   80% {
-    background-color: crimson;
+    background-color: #C7C6C4;
     right: 10px;
     top: 100px;
     border-radius: 50% 50% 50% 0;
   }
   99% {
-    background-color: darkolivegreen;
+    background-color: #F28F79;
     right: 500px;
     top: 250px;
     border-radius: 50% 50% 50% 50%;
@@ -485,57 +510,60 @@ img {
 
 @keyframes littlealien2 {
   0% {
-    background-color: green;
+    background-color: #3F768C;
     right: 220px;
     top: 850px;
     border-radius: 50% 50% 0 0;
   }
   4% {
-    background-color: rgb(92, 54, 95);
+    background-color: #F2D785;
     left: 300px;
     bottom: 330px;
     border-radius: 50% 50% 0 0;
   }
   10% {
-    background-color: green;
+    background-color:#d9d9d9;
     right: 100px;
     bottom: 200px;
     border-radius: 50% 50% 50% 0;
   }
   14% {
-    background-color: rgb(247, 30, 30);
+    background-color: #D99152;
     right: 100px;
     bottom: 300px;
     border-radius: 10% 40% -20% 0;
   }
   25% {
-    background-color: rgb(27, 175, 233);
+    background-color: #6C7336;
     bottom: 500px;
     right: 200px;
     border-radius: 20% 30% 0 0;
   }
   30% {
-    background-color: red;
+    background-color: #C7C6C4;
     right: 10px;
     bottom: 400px;
     border-radius: 20% 30% 0 0;
   }
   50% {
-    background-color: purple;
+    background-color: #F2C0A2;
     right: 50px;
     bottom: 80px;
     border-radius: 50% 50% 0 0;
   }
   75% {
-    background-color: orange;
+    background-color: #3F768C;
     right: 300px;
     bottom: 100px;
     border-radius: 50% 50% 50% 0;
   }
   99% {
-    background-color: green;
+    background-color: #F28F79;
     right: 80px;
     bottom: 250px;
     border-radius: 50% 50% 50% 50%;
   }
+ 
+
 }
+

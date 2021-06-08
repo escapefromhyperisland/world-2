@@ -2,6 +2,14 @@ function alertUser(msg) {
     alert(msg);
 }
 
+setTimeout(function(){alert("The aliens designed this to be REALLLY F*CKING ANNOYING. But here is a CLUE!! - Find the radio that sounds like a man falling off a cliff, then you are close!")},45000);
+
+setTimeout(function(){alert("CLUE!! - The black hole of death is protecting your radio!")},90000);
+
+setTimeout(function(){alert("FINAL CLUE!! - 12 radios then 7 radios")},120000);
+
+setTimeout(function(){alert("If this is SUUUPER annoying then just admit defeat, scroll to the bottom and move to the next level")},140000);
+
 window.addEventListener("DOMContentLoaded", event => {
   const audio = document.querySelector("audio");
   audio.volume = 0.2;
