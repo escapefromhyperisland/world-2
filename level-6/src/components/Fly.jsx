@@ -1,0 +1,16 @@
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./fly.css";
+
+function Fly() {
+  return (
+    <div className="fly">
+      <section className="question">
+        <h1>Goodbye to your plannet!!</h1>
+      </section>
+    </div>
+  );
+}
+
+export default Fly;
