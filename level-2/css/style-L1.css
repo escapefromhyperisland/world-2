@@ -72,8 +72,8 @@ button {
   flex: center;
   height: 100px;
   width: 100px;
-  left: 1450px;
-  bottom: 30px;
+  left: 780px;
+  top: 80px;
   background-color: transparent;
   border-color: transparent;
 }
@@ -91,36 +91,7 @@ button {
   height: 400px;
 }
 
-/* .link-1 {
-  font-size: 12px;
-  color: white;
-  text-decoration: none;
-  flex: center;
-}
-.link-1 {
-  font-size: 12px;
-  color: white;
-  text-decoration: none;
-  flex: center;
-}
-.link-2 {
-  font-size: 12px;
-  color: white;
-  text-decoration: none;
-  flex: center;
-}
-.link-3 {
-  font-size: 12px;
-  color: white;
-  text-decoration: none;
-  flex: center;
-}
-.link-4 {
-  font-size: 12px;
-  color: white;
-  text-decoration: none;
-  flex: center;
-} */
+
 .hidden {
   display: none;
 }
