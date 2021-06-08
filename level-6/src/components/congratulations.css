@@ -1,0 +1,35 @@
+body {
+  text-align: center;
+  background-image: url(../assets/images/astronaut.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Space Mono";
+}
+.congratulation {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.text {
+  background-color: rgb(217, 145, 82, 0.6);
+  margin: 50px;
+}
+
+.congratsText {
+  font-size: 3rem;
+}
+
+.hiddenClass {
+  display: none;
+}
+
+.showButton {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 1.5rem;
+  background-color: #3f768c;
+}
