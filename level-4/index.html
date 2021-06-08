@@ -1,0 +1,397 @@
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+		<script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+		<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>		<script src="srcipt/popup.js"></script>
+		<script src="srcipt/popup.js"></script>
+		<script src="srcipt/paperPopup.js"></script>
+		<script src="srcipt/introPopup.js"></script>
+		<script src="srcipt/outsideClue.js"></script>
+		<script src="srcipt/finalPopup.js"></script>
+
+		<link rel="stylesheet" href="./styling/style.css">	
+	</head>
+	<body>
+
+		<!-- First popup clue window -->
+		<div id="popupIntro" class="modal hide">
+			<div class="introContent">
+				<h1>Hey!</h1>
+				<h4>HAHA, trapped you. I forgot where i put my beer, find it and i might give you your space piece back. The map will help you get started.
+				</h4>			
+				<button class="popup-button" onclick="closeIntroPopup()">Close</button>
+				<p class="escInfo">(Press esc to be able to click)</p>
+			</div>
+		</div>
+		<!-- First item popup  -->
+
+		<div id="popupWindow" class="modal hide">
+			<div class="popupContent">
+				<h1>1/3</h1>
+				<h4>You have found my beer! Maybe you're more clever than i thought...</h4>
+				<button class="popup-button" onclick="closeFirstPopup()">Close</button>
+				<p class="escInfo">(Press esc to be able to click)</p>
+			</div>
+		</div>
+		<!-- Paper clue -->
+		<div id="paperClue" class="modal hide">
+			<div class="paperContent">
+				<h1>Clue</h1>
+				<h4>Are you still in here?</h4>
+				<button class="popup-button" onclick="closePopup()">Close</button>
+				<p class="escInfo">(Press esc to be able to click)</p>
+			</div>
+		</div>
+
+		<!-- Outside Clue  -->
+		<div id="outClue" class="modal hide">
+			<div class="outContent">
+				<h1>2/3</h1>
+				<h4>You finally found yourself out. I have hidden your space piece in the forest. </h4>
+				<button class="popup-button" onclick="closeOutPopup()">Close</button>
+				<p class="escInfo">(Press esc to be able to click)</p>
+			</div>
+		</div>
+		<!-- Final Clue  -->
+		<div id="finalClue" class="modal hide">
+			<div class="finalContent">
+				<h1>3/3</h1>
+				<img src="assets/gas-tank.png" class="gasTank"></img>
+				<h4> You found the missing piece, the fuel for your spaceship! Now get out of my forrest!! </h4>
+				<button class="popup-button" onclick="closeFinalPopup()">Next Level</button>
+				<p class="escInfo">(Press esc to be able to click)</p>
+			</div>
+		</div>
+
+		<!-- Error final clue -->
+		<div id="finalClueFalse" class="modal hide">
+			<div class="finalFalseContent">
+				<h1>Try again</h1>
+				<h4> Hey, don't skip ahead. You have to find the other pieces to open this one! </h4>
+				<button class="popup-button" onclick="closeFinalFalsePopup()">Close</button>
+				<p class="escInfo">(Press esc to be able to click)</p>
+			</div>
+		</div>
+	
+		<a-scene 
+		cursor="rayOrigin: mouse" 
+		inspector-plugin-recast         
+		fog="color:  #223a59;  near:  0;  far:  19.81;  density:  0"
+		environment="preset:  goaland;  active:  true;  skyType:  gradient;  skyColor:  #000000;  horizonColor:  #9992f7;  lighting:  point;  shadow:  true;  lightPosition:  [object Object];  fog:  0.96;  groundTexture:  squares;  dressing:  trees;  dressingAmount:  300;  dressingVariance:  [object Object];  dressingScale:  6.7"
+		>
+			<a-asset-item id="nav-mesh" src="navmesh-1.gltf"></a-asset-item>
+			<a-assets>
+				<img id="map" src="assets/map.png" />
+				<img id="concrete" src="assets/old-grunge-concrete.jpg" />
+				<img id="aliens" src="assets/aliens.jpg" />
+				<img id="beer" src="assets/beer-label.jpg" />
+
+				<!-- Furniture -->
+				<a-asset-item
+					id="wooden-table-obj"
+					src="./wooden-coffe-table-obj/wooden-coffe-table.obj"
+				></a-asset-item>
+				<a-asset-item
+					id="wooden-table-mtl"
+					src="./wooden-coffe-table-obj/wooden-coffe-table.mtl"
+				></a-asset-item>
+
+				<a-asset-item
+					id="shelf-obj"
+					src="./bookshelf-obj/bookshelf.obj"
+				></a-asset-item>
+				<a-asset-item
+					id="shelf-mtl"
+					src="./bookshelf-obj/bookshelf.mtl"
+				></a-asset-item>
+
+				<a-asset-item 
+                    id="books-obj" 
+                    src="./books-obj/books.obj"
+                ></a-asset-item>
+				<a-asset-item 
+                    id="books-mtl" 
+                    src="./books-obj/books.mtl"
+                ></a-asset-item>
+
+				<a-asset-item 
+                    id="chair-obj" 
+                    src="./chair-obj/chair.obj"
+                ></a-asset-item>
+				<a-asset-item 
+                    id="chair-mtl" 
+                    src="./chair-obj/chair.mtl"
+                ></a-asset-item>
+
+				<a-asset-item 
+                    id="statue-obj" 
+                    src="./lion-statue-obj/lion-statue.obj"
+                ></a-asset-item>
+				<a-asset-item 
+                    id="statue-mtl" 
+                    src="./lion-statue-obj/lion-statue.mtl"
+                ></a-asset-item>
+
+				<a-asset-item 
+                    id="bed-obj" 
+                    src="./fixed-opem-sim-bead-model-obj/fixed-opem-sim-bead-model.obj"
+                ></a-asset-item>
+				<a-asset-item 
+                    id="bed-mtl" 
+                    src="./fixed-opem-sim-bead-model-obj/fixed-opem-sim-bead-model.mtl"
+                ></a-asset-item>
+
+				<a-asset-item 
+                    id="alien-obj" 
+                    src="./model-obj/model.obj"
+                ></a-asset-item>
+				<a-asset-item 
+                    id="alien-mtl" 
+                    src="./model-obj/materials.mtl"
+                ></a-asset-item>
+	
+				<a-asset-item 
+                    id="chest-obj" 
+                    src="./chest/model-2.obj"
+                ></a-asset-item>
+				<a-asset-item 
+                    id="chest-mtl" 
+                    src="./chest/materials-2.mtl"
+                ></a-asset-item>
+				
+
+
+
+			</a-assets>
+			<!-- Camera settings -->
+			<a-entity movement-controls="speed: 0.15; constrainToNavMesh: true">
+				<a-entity
+					camera
+					position="0 1.6 0"
+					look-controls="pointerLockEnabled: true"
+				>
+                <a-cursor></a-cursor>   
+                </a-entity
+			></a-entity>
+
+            <a-sky color="#002746"></a-sky>
+
+			<!-- Light -->
+			<a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2"
+			position="0 0 0"></a-entity>
+
+
+			<!-- Furniture -->
+
+            <a-entity 
+                obj-model="obj: #chest-obj; mtl: #chest-mtl" 
+				position="15 0.3 9"	
+				rotation="0 90 0"
+				scale="0.4 0.4 0.4"
+				open-final
+            ></a-entity>
+
+            <a-entity 
+                obj-model="obj: #alien-obj; mtl: #alien-mtl" 
+				position="-7 1.2 -2"	
+				scale="0.3 0.3 0.3"
+				rotation="0 90 0"
+				open-out-clue
+            ></a-entity>
+            <a-entity 
+                obj-model="obj: #wooden-table-obj; mtl: #wooden-table-mtl" 
+                position="2 0.15 -2.1" 
+                scale="0.7 0.7 0.7"
+            ></a-entity>
+
+            <a-entity 
+                obj-model="obj: #shelf-obj; mtl: #shelf-mtl" 				
+                position="-2.4 0 -2"
+                scale="0.5 0.5 0.5" 	
+                rotation="0 90 0"
+            ></a-entity>
+
+            <a-entity 
+                obj-model="obj: #books-obj; mtl: #books-mtl" 
+                rotation="0 90 0"	
+                position="-2 1.5 -1.2"
+                scale="2 2 2" 	
+            ></a-entity>
+
+            <a-entity 
+                obj-model="obj: #books-obj; mtl: #books-mtl" 
+                rotation="0 90 0"	
+                position="-2 0.8 -2.12"
+                scale="1.5 1.5 1.5" 	
+            ></a-entity>
+
+            <a-entity 
+                obj-model="obj: #chair-obj; mtl: #chair-mtl" 
+                rotation="0 90 0"	
+                position="1.1 0 -2"
+                scale="0.02 0.02 0.02"
+            ></a-entity>
+
+            <a-entity 
+                obj-model="obj: #chair-obj; mtl: #chair-mtl" 
+                rotation="0 150 0"	
+                position="2 0 -1.3"
+                scale="0.02 0.02 0.02"
+            ></a-entity>
+            <a-entity 
+                obj-model="obj: #statue-obj; mtl: #statue-mtl" 
+                rotation="0 0 0"	
+                position="-2.2 1.5 -2.4"
+                scale="0.05 0.05 0.05"
+            ></a-entity>
+            <a-entity 
+                obj-model="obj: #bed-obj; mtl: #bed-mtl" 
+                rotation="0 90 0"	
+                position="2.35 0.5 0.4"
+				scale="0.7 0.7 0.7"
+				animation="property: position; from: 2.4 0.5 0.4; to: 1.4 0.5 0.4; easing: linear; startEvents: click;" dur: 2000"
+
+            ></a-entity>
+			<!-- Furniture end-->
+
+			<!-- Finding items -->
+            <a-cylinder
+				src="#beer"
+                animation="property: color; to: #008000; easing: linear; startEvents: click;" dur: 2000"
+                id="cylinder"
+                position="-2.33 0.85 -1.9"
+                radius="0.06"
+                height="0.2"
+                color="#ffc65d"
+				open-popup
+            ></a-cylinder> 
+
+			<!-- roof and floor -->
+			<a-plane
+				src="#concrete"
+				position="0 0.01 0"
+				rotation="-90 0 0"
+				width="6"
+				height="6"
+				side="double"
+			></a-plane>
+
+			<a-plane
+				src="#concrete"
+				position="0 3 0"
+				rotation="-90 0 0"
+				width="6"
+				height="6"
+				side="double"
+
+			></a-plane> 
+			<!-- Walls -->
+			<a-plane
+				src="#concrete"
+				position="0 1.5 -3"
+				rotation="0 0 0"
+				width="6"
+				height="3"
+				side="double"
+			></a-plane>
+
+			<a-plane 
+			src="#concrete"
+				position="0 1.5 3"
+				rotation="0 0 0"
+				width="6"
+				height="3"
+				side="double"
+			></a-plane> 
+
+			<a-plane 
+			src="#concrete"
+				position="-3 1.5 0"
+				rotation="0 90 0"
+				width="6"
+				height="3"
+				side="double"
+
+			></a-plane>
+
+			<a-plane 
+			src="#concrete"
+				position="3 1.5 0"
+				rotation="0 90 0"
+				width="6"
+				height="3"
+				side="double"
+			></a-plane>
+			<!-- Walls end -->
+
+			<!-- Alien photo-->
+			<a-plane
+			    src="#aliens"
+			    animation="property: position; from: -2.2 0.90 -1.8 ; to: -2.2 0.90 -1.5 ; easing: linear; startEvents: click;" dur: 3000"
+				position="-2.2 0.90 -1.8"
+				rotation="-10 70 0"
+				height="0.4"
+				width="0.4"
+				side="double"
+			></a-plane>
+
+			<!-- Map -->
+			<a-plane
+			    src="#map"
+			    animation="property: position; from: -2.985 1.5 1.8 ; to: -2.985 0.6 1.8 ; easing: linear; startEvents: click;" dur: 3000"
+				position="-2.985 1.5 1.8"
+				rotation="0 90 0"
+				height="0.8"
+				width="0.8"
+				side="double"
+			></a-plane>
+
+			
+			<!-- Clues -->
+			<a-plane
+				color="#fff"
+				position="-2.99 1.5 1.8"
+				rotation="0 90 0"
+				height="0.8"
+				width="0.8"
+				side="double"
+				text="value:  Captured memories ...;  color:  #000;  align:  center"	
+			></a-plane> 
+
+			<a-plane
+				color="#fff"
+                position="2.6 0.2 1"
+				rotation="-90 180 0"
+				height="0.2"
+				width="0.2"
+				side="double"
+				open-paper
+			></a-plane> 
+
+			<a-plane
+				color="#fff"
+                position="2 1.1 -2"
+				rotation="0 -30 0"
+				height="0.2"
+				width="0.2"
+				side="double"
+				open-intro
+			></a-plane> 
+			<!-- Clues end-->
+
+			<!-- Scene ground -->
+			<a-plane
+				position="0 -0.5 -4"
+				rotation="-90 0 0"
+				width="40"
+				height="40"
+				color="#f2c0a2"
+				shadow
+			></a-plane>
+
+			<!-- Navmesh -->
+			<a-entity gltf-model="#nav-mesh" nav-mesh visible="false"></a-entity>
+		</a-scene>
+	</body>
+</html>
