@@ -34,7 +34,10 @@ const Level = (props) => {
           </section>
           {typeComplete ? (
             <div>
-              <p>"You have to tell what comes next in this sequence?"</p>
+              <p>
+                "Code is the next number in the sequence. Press the right number
+                and unlock the door"
+              </p>
               <h3>4, 9, 16, 25, ?</h3>
             </div>
           ) : null}
@@ -105,7 +108,7 @@ const Level = (props) => {
         <div className={classButton.class1}>
           <p className="jawab">
             Woww!! You have unlocked the door, but you are not fully done yet.
-            :)
+            You need to find the Password to start the Engine.
           </p>
           <Link to="/level2">
             <button className="answer-button">
