@@ -14,7 +14,7 @@ function Congratulation() {
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                "<span className = 'congratsText'>CONGRATULATIONS!!!</span> Your space ship is fixed, you need to find the code to unlock the door."
+                "<span className = 'congratsText'>CONGRATULATIONS!!!</span> Your spaceship is fixed, now you need to find the code to open the door."
               )
               .callFunction(() => {
                 setButtonClass("showButton");

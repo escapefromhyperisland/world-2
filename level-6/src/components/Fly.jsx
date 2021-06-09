@@ -7,7 +7,7 @@ function Fly() {
   return (
     <div className="fly">
       <section className="question">
-        <h1>Goodbye to your plannet!!</h1>
+        <h1>Goodbye to your planet!!</h1>
       </section>
 
       <button

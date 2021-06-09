@@ -35,7 +35,7 @@ const Level2 = () => {
   return (
     <div className="level2">
       <section className="question">
-        <h1>To start the engine you have to enter the right password:</h1>
+        <h1>Now, to start the engine you have to enter the right password:</h1>
         <h3>
           If you have used the old phone with the numeric keyboard, you can find
           the number which is hidden in the word "PASSWORD"
@@ -60,7 +60,7 @@ const Level2 = () => {
         Submit
       </button>
       <section>
-        <h3 className={classButton}>You have entered the right answer</h3>
+        <h3 className={classButton}>You have entered the right password</h3>
         <Link to="/fly">
           <button className={nextButtonClass}>Fly Back Home</button>
         </Link>
