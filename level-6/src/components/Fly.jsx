@@ -9,6 +9,13 @@ function Fly() {
       <section className="question">
         <h1>Goodbye to your plannet!!</h1>
       </section>
+
+      <button
+        className="finalButton"
+        onclick="window.parent.postMessage('nextLevel')"
+      >
+        Next Level
+      </button>
     </div>
   );
 }
