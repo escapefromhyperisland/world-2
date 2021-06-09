@@ -14,7 +14,7 @@ function Congratulation() {
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                "<span className = 'congratsText'>Congratulations!!!</span> you are almost done. You need to find the code to unlock the door."
+                "<span className = 'congratsText'>CONGRATULATIONS!!!</span> Your space ship is fixed, you need to find the code to unlock the door."
               )
               .callFunction(() => {
                 setButtonClass("showButton");
@@ -24,7 +24,7 @@ function Congratulation() {
         />
       </section>
       <Link to="/level1">
-        <button className={buttonClass}>Try To Open the Door</button>
+        <button className={buttonClass}>TRY TO OPEN THE DOOR</button>
       </Link>
     </div>
   );

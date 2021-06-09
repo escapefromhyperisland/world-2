@@ -1,30 +1,26 @@
 import React from "react";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./level2.css";
-
-// const initialStae = {
-//   class1: "answer",
-//   class2: "answer",
-//   class3: "answer",
-//   class4: "answer",
-// };
 
 const Level2 = () => {
   const [classButton, setClassButton] = useState("false");
+  const [nextButtonClass, setNextButtonClass] = useState("false");
   const [inputValue, setInputValue] = useState("");
+
   const handleChange = (e) => {
     setInputValue((previousValue) => e.target.value);
-    console.log(inputValue);
   };
 
   function handleClick() {
-    console.log(inputValue);
     if (inputValue === "72779673") {
       setClassButton("true");
+      setNextButtonClass("nextButton");
       console.log(classButton);
     } else {
       setClassButton("false");
+      setNextButtonClass("false");
+
       console.log(classButton);
     }
   }
@@ -44,18 +40,17 @@ const Level2 = () => {
           If you have used the old phone with the numeric keyboard, you can find
           the number which is hidden in the word "PASSWORD"
         </h3>
-      </section>
-      <div className="answerInput">
+
         <input
           className="password"
           id="password"
           onChange={handleChange}
-          // onKeyPress={handleKeypress}
           value={inputValue}
           type="number"
           placeholder="Enter your password"
         ></input>
-      </div>
+      </section>
+
       <button
         className="password-button"
         type="submit"
@@ -65,7 +60,10 @@ const Level2 = () => {
         Submit
       </button>
       <section>
-        <h1 className={classButton}>You have entered the right answer</h1>
+        <h3 className={classButton}>You have entered the right answer</h3>
+        <Link to="/fly">
+          <button className={nextButtonClass}>Fly Back Home</button>
+        </Link>
       </section>
     </div>
   );
