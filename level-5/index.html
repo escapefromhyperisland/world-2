@@ -7,12 +7,8 @@
 <meta charset="UTF-8">
 
 <title>"""
-{rbw}Escaping HI-22{rbw}
-{pg}
-I still have some pieces for my spaceship that I need to find..
-{pg}
-Hmm .. I wonder where the engine could be..
-"""</title>
+Escaping HI-22
+</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
 """
@@ -13489,6 +13485,16 @@ body {
 	margin:auto;
 	display:block;
 }
+
+button {
+  background-color: #d9d9d9;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
 </style>
 
 <!-- SCRIPTS -->
@@ -18341,7 +18347,9 @@ function updateInput() {
 	else if ( isEnding ) {
 		if (input.anyKeyPressed() || input.isTapReleased()) {
 			/* RESTART GAME */
-			reset_cur_game();
+      window.parent.postMessage('nextLevel')
+      console.log("hello game is restarted")
+			
 		}
 	}
 	else {
@@ -18696,7 +18704,21 @@ function movePlayer(direction) {
 	}
 
 	if (end) {
-		startEndingDialog(end);
+    startEndingDialog(end);
+    /*const divNext = document.createElement('div')
+    const buttonNext = document.createElement("button")
+    buttonNext.innerText = "Next level"
+    const nextLevel = () => {
+      window.alert("Good job you finished the game and move on to next game")
+      console.log("going to next level")
+      window.parent.postMessage('nextLevel')
+    }
+    buttonNext.addEventListener('click', nextLevel()) 
+    divNext.appendChild(buttonNext)    
+    document.body.insertAdjacentElement('afterBegin', divNext)
+    console.log("ending dialog started")*/
+		
+    
 	}
 	else if (ext) {
 		movePlayerThroughExit(ext);
@@ -22401,8 +22423,11 @@ CHAR 255
 <!-- DOCUMENT BODY -->
 <body onload='startExportedGame()'>
 	<!-- GAME CANVAS -->
+  
 	<canvas id='game'></canvas>
-</body>
 
+  
+  
+</body>
 
 </html>
